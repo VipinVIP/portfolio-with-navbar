@@ -1,0 +1,18 @@
+.project-list-div{
+    display: flex;
+    padding-left:10px;
+}
+
+.project-box{
+    flex: 1;
+    margin-right: 10px;
+}
+
+#projects-div h2{
+    padding-left: 10px;
+    margin-bottom: 50px;
+}
+
+.project-box a,h2,h4,p{
+    color:#ededed;
+}
