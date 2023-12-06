@@ -1,11 +1,28 @@
 .project-list-div{
     display: flex;
     padding-left:10px;
+    padding-right: 30px;
 }
 
 .project-box{
     flex: 1;
-    margin-right: 10px;
+    margin-right: 50px;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px -4px rgba(0,0,0,0.6);
+    margin-bottom: 30px;
+    transition-duration: 0.3s;
+    transition-property: box-shadow, transform;
+}
+.project-box:hover{
+    box-shadow: 0px 0px 20px -2px rgba(0,0,0,0.6);
+    transform: scale(1.05);
+}
+.project-box img{
+    width:100%;
+    border: 1px solid transparent;
+    border-radius: 8px;
 }
 
 #projects-div h2{
@@ -14,5 +31,23 @@
 }
 
 .project-box a,h2,h4,p{
-    color:#ededed;
+    color:black;
+}
+.project-box p{
+    font-size: .9em;
+    text-align: justify;
+
+}
+
+.text-box{
+    margin: 10px;
+}
+.link-wrapper{
+    display: flex;
+    align-items: center;
+}
+.link-wrapper img{
+    width: 15px;
+    padding-right:10px;
+    border-radius: 0;
 }

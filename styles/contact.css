@@ -1,0 +1,27 @@
+.flex-wrapper-social{
+    display: flex;
+    margin-top: 100px;
+}
+.social-wrapper{
+    flex: 1;
+    display: flex;
+ 
+}
+.social-wrapper img{
+    width: 40px;
+}
+.flexible-row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.flexible-row a{
+    text-decoration: none;
+    color: black;
+    transition: 5s;
+}
+
+.flexible-row a:hover{
+text-decoration: underline;
+}

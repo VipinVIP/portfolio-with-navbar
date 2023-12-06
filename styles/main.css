@@ -1,44 +1,65 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 body {
   margin: 0;
   padding: 0;
   height: 100vh;
   font-family: "Poppins", sans-serif;
-  background-color: #081b29;
+  background-color: #ffffff;
 }
+
 .section-div {
-  height: 100vh;
+  min-height: 100vh;
+  position: relative;
 }
 .wrapper-padding-div {
   padding-left: 8%;
   padding-top: 10%;
 }
+.wrapper-padding-div strong{
+  position:relative;
 
-.wrapper-padding-div #home-div {
-  position: relative;
 }
-
+.wrapper-padding-div strong::after{
+  background-image: url(../images/zap.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  content: "";
+  display: block;
+  height: .3em;
+  left: -.2em;
+  position: absolute;
+  top: 100%;
+  width: calc(100% + .4em);
+}
 #home-div h1 {
   font-size: 50px;
-  margin-top: 12%;
-  color: white;
+  margin-top: 10%;
+  color: black;
 }
 #home-div span {
-  color: #00abf0;
+  color: #ffa436;
 }
 
 #home-div p {
-  color: white;
-  line-height: 22px;
+  color: black;
+  font-size: 15px;
+  font-family: Roboto;
+  font-weight: 600;
+  line-height: 30px;
 }
 
 #home-div button {
-  padding: 10px;
-  margin-top: 15px;
-  background-color: #00abf0;
-  border: 1px solid #00abf0;
+  padding: 15px;
+  font-weight: 600;
+  background-color: #ffa436;
+  color: white;
+  border: 1px solid #ffa436;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
 }
 
 .images {
