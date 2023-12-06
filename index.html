@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="stylesheet" href="./styles/project-section.css" />
     <link rel="stylesheet" href="./styles/about-me.css" />
+    <link rel="stylesheet" href="./styles/qualifications.css" />
   </head>
   <body>
     <!-- Nabar Start -->
@@ -32,7 +33,13 @@
           and work<br />
           To know more about me, download the resume below
         </p>
-        <button>Download Resume <img src="./images/social_icons/download-icon.svg" alt="download icon"></button>
+        <button>
+          Download Resume
+          <img
+            src="./images/social_icons/download-icon.svg"
+            alt="download icon"
+          />
+        </button>
       </div>
 
       <div class="images">
@@ -76,7 +83,6 @@
         </div>
       </div>
     </div>
-    <!--AboutMe div End -->
 
     <!--Projects div Start -->
     <div id="projects-div" class="section-div">
@@ -107,35 +113,74 @@
         <h2><strong>My Projects</strong></h2>
         <div class="project-list-div">
           <div class="project-box">
-            <h4>Hide-It</h4>
-            <p>
-              A Fun personal Project which hides your text messages in
-              plain-text via whitespace steganography.
-            </p>
-            <a href="https://hide-it.netlify.app/">Go to Project</a>
+            <img
+              src="./images/previews/hide-it-screenshot.png"
+              alt="screenshot of hide-it"
+            />
+            <div class="text-box">
+              <h4>Hide-It</h4>
+              <p>
+                A Fun personal Project which hides your text messages in
+                plain-text via whitespace steganography.
+              </p>
+              <div class="link-wrapper">
+                <a href="https://hide-it.netlify.app/"
+                  ><img
+                    src="./images/social_icons/link-icon.svg"
+                    alt="link icon"
+                  />Go to Project</a
+                >
+              </div>
+            </div>
           </div>
           <div class="project-box">
-            <h4>BlockChain E-Voting System</h4>
-            <p>
-              A decentralized E-voting system preserving the user's privacy, yet
-              ensuring authenticity
-            </p>
-            <a href="https://github.com/SVAD-S/votem">Go to Project</a>
+            <img
+              src="./images/previews/votem-screenshot.png"
+              alt="screenshot of votem"
+            />
+            <div class="text-box">
+              <h4>BlockChain E-Voting System</h4>
+              <p>
+                A decentralized E-voting system preserving the user's privacy,
+                yet ensuring authenticity.
+              </p>
+
+              <div class="link-wrapper">
+                <a href="https://github.com/SVAD-S/votem"
+                  ><img
+                    src="./images/social_icons/link-icon.svg"
+                    alt="link icon"
+                  />Go to Project</a
+                >
+              </div>
+            </div>
           </div>
           <div class="project-box">
-            <h4>TTI Converter</h4>
-            <p>
-              A Project to turn your text into images and later decrypt them
-              back to text.Another personal hobby project.
-            </p>
-            <a href="https://vipinvip.github.io/TTI-converter/"
-              >Go to Project</a
-            >
+            <img
+              src="./images/previews/tti-screenshot.png"
+              alt="screenshot of tti"
+            />
+            <div class="text-box">
+              <h4>TTI Converter</h4>
+              <p>
+                A Project to turn your text into images and later decrypt them
+                back to text.Another personal hobby project.
+              </p>
+              <div class="link-wrapper">
+                <a href="https://vipinvip.github.io/TTI-converter/"
+                  ><img
+                    src="./images/social_icons/link-icon.svg"
+                    alt="link icon"
+                  />Go to Project</a
+                >
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <!--Projects div End -->
+
+    <!--Education div Start -->
     <div id="education-div" class="section-div">
       <div class="custom-shape-divider-top">
         <svg
@@ -162,16 +207,23 @@
       </div>
       <div class="wrapper-padding-div">
         <h2><strong>Qualifications</strong></h2>
-        <span>Btech</span>
-        <div class="progress-bar-animated"></div>
-        <span>Btech</span>
-        <div class="progress-bar-animated"></div>
-        <span>Btech</span>
-        <div class="progress-bar-animated"></div>
+        <div class="wrapper-progress-text">
+          <span>Btech in CSE</span>
+          <div class="progress-bar-animated">
+            <div class="progress-bar btech"></div>
+          </div>
+        </div>
+        <div class="wrapper-progress-text">
+          <span>Kerala HSE</span>
+          <div class="progress-bar-animated">
+            <div class="progress-bar hse"></div>
+          </div>
+        </div>
 
         If you are still doubted, Talk to me
       </div>
     </div>
+    <!--Contact div Start -->
     <div id="contact-div" class="section-div">
       <div class="custom-shape-divider-top greyer">
         <svg
@@ -206,23 +258,30 @@
     </div>
   </body>
   <script>
-  document.addEventListener("DOMContentLoaded", function() {
-  const links = document.querySelectorAll('.links-div a');
+    document.addEventListener("DOMContentLoaded", function () {
+      const links = document.querySelectorAll(".links-div a");
 
-  window.addEventListener('scroll', function() {
-    const scrollPosition = window.scrollY;
+      window.addEventListener("scroll", function () {
+        const scrollPosition = window.scrollY;
 
-    links.forEach(function(link) {
-      const sectionId = link.getAttribute('href').substring(1); // Remove the '#' from the href
-      const section = document.getElementById(sectionId);
+        links.forEach(function (link) {
+          const sectionId = link.getAttribute("href").substring(1);
+          const section = document.getElementById(sectionId);
 
-      if (section.offsetTop <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
-      }
+          if (section) {
+            const rect = section.getBoundingClientRect();
+
+            if (
+              rect.top <= window.innerHeight / 2 &&
+              rect.bottom >= window.innerHeight / 2
+            ) {
+              link.classList.add("active");
+            } else {
+              link.classList.remove("active");
+            }
+          }
+        });
+      });
     });
-  });
-});
   </script>
 </html>
