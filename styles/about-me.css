@@ -37,3 +37,28 @@
     font-weight: 700;
     color:#ffa436;
 }
+
+#about-me a {
+    text-decoration: none;
+    position: relative;
+    color: #000; /* Set the default text color */
+    transition: color 0.3s; /* Add transition for color change */
+  }
+
+  /* Define the underline styles */
+  #about-me a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: #ffa436;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s; /* Add transition for width change */
+  }
+
+  /* Expand the underline on hover */
+  #about-me a:hover::after {
+    width: 100%;
+  }

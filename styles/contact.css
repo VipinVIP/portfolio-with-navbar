@@ -1,27 +1,53 @@
-.flex-wrapper-social{
-    display: flex;
-    margin-top: 100px;
+.flex-wrapper-social {
+  display: flex;
+  margin-top: 100px;
 }
-.social-wrapper{
-    flex: 1;
-    display: flex;
- 
+.social-wrapper {
+  flex: 1;
+  display: flex;
 }
-.social-wrapper img{
-    width: 40px;
+.social-wrapper img {
+  width: 40px;
 }
-.flexible-row{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.flexible-row a{
-    text-decoration: none;
-    color: black;
-    transition: 5s;
+.flexible-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.flexible-row a:hover{
-text-decoration: underline;
+#contact-div a {
+    text-decoration: none;
+    position: relative;
+    color: #000; /* Set the default text color */
+    transition: color 0.3s; /* Add transition for color change */
+  }
+
+  /* Define the underline styles */
+  #contact-div a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: #ffa436;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s; /* Add transition for width change */
+  }
+
+  /* Expand the underline on hover */
+  #contact-div a:hover::after {
+    width: 100%;
+  }
+
+.center-footer {
+  font-size: 25px;
+  font-weight: 500;
+  margin-top: 150px;
+  margin-right: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
